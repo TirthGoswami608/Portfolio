@@ -1,9 +1,10 @@
-function hero(){
-    return (
-        <section style={{paddding:"40px", textAlign:"center"}}>
-            <h1>Hello. I'm <span style={{color:"blue"}}>Tirth</span></h1>
-            <p></p>
-        </section>
-    );
+function Hero() {
+  return (
+    <section className="hero">
+      <h1>Hello, I'm Tirth 👋</h1>
+      <p>Full Stack Developer — React | Node | MySQL</p>
+    </section>
+  );
 }
-export default hero;
+
+export default Hero;

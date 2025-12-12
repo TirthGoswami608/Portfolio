@@ -1,17 +1,19 @@
-const express =require ("express");// loads Express library
-const cors=require("cors");//cors allows your React frontend to request data from backend
-const app=express();//this create backend server 
+const express = require("express");
+const cors = require("cors");
 
-app.use(express.json());  // this allows backend to understand json
-app.use(cors()); // React to backend browsers block different port communication for security. cors solve that 
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-app.get("/",(req,res)=>{
-    res.send("backend API is working");
+// ROUTES
+app.use("/api/admin", require("./routes/admin"));
+app.use("/api/projects", require("./routes/projects"));
+app.use("/api/contact", require("./routes/contact"));
+app.use("/api/skills", require("./routes/skills"));
 
+app.get("/", (req, res) => {
+  res.send("Backend API is working");
 });
-//route files 
-app.use("/api/cotact",require("./routes/contact"));
-app.use("/api/projects",require("./routes/projects"));
-//start server
-const PORT =5000;
-app.listen(PORT,()=> console.log(`Server running on port ${PORT}`));
+
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

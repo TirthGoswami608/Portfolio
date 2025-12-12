@@ -1,5 +1,5 @@
 const mysql =require("mysql2");// this loads the My sql library 
-const pool= mysql.createPool({
+const pool= mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"1234",

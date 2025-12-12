@@ -1,0 +1,43 @@
+.admin-login {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-card {
+  background: #111;
+  padding: 25px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,209,0.2);
+}
+
+.admin-card input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+}
+
+.admin-dashboard {
+  padding: 20px;
+  color: white;
+}
+
+.admin-item {
+  background: #111;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+.delete {
+  float: right;
+  background: red;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+}
